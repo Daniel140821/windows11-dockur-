@@ -6,6 +6,8 @@ services:
       VERSION: "11"
       USERNAME: "Daniel"
       LANGUAGE: "Chinese"
+  	  RAM_SIZE: "12G"
+  	  CPU_CORES: "2"
     container_name: windows
     privileged: true
     devices:
