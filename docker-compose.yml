@@ -1,26 +1,24 @@
-version: '3'
 services:
   windows:
     image: dockurr/windows
+    container_name: windows
     environment:
       VERSION: "11"
+      RAM_SIZE: "12G"
+      CPU_CORES: "2"
       USERNAME: "Daniel"
       LANGUAGE: "Chinese"
-  	  RAM_SIZE: "12G"
-  	  CPU_CORES: "2"
-    container_name: windows
-    privileged: true
+    ports:
+      - 8006:8006
+      - 3389:3389/tcp
+      - 3389:3389/udp
     devices:
       - /dev/kvm
       - /dev/net/tun
     cap_add:
       - NET_ADMIN
     volumes:
-      - ${PWD:-.}/windows:/storage
-    ports:
-      - 8006:8006
-      - 3389:3389/tcp
-      - 3389:3389/udp
-    stdin_open: true
-    tty: true
+      - ./windows:/storage
     stop_grace_period: 120s
+    tty: true
+    stdin_open: true
