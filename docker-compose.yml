@@ -1,0 +1,22 @@
+version: '3'
+services:
+  windows:
+    image: dockurr/windows
+    environment:
+      VERSION: "11"
+      USERNAME: "Daniel"
+      LANGUAGE: "Chinese"
+    container_name: windows
+    privileged: true
+    devices:
+      - /dev/kvm
+      - /dev/net/tun
+    cap_add:
+      - NET_ADMIN
+    volumes:
+      - ${PWD:-.}/windows:/storage
+    ports:
+      - "8006:8006"
+    stdin_open: true
+    tty: true
+    stop_grace_period: 120s
