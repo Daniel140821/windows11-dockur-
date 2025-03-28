@@ -1,5 +1,5 @@
 # windows11-dockur-
-# Github dockur/windows
+# Github dockur/windows (https://github.com/dockur/windows)
 Create VM:
    sh create_vm.sh
    
