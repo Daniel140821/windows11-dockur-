@@ -8,3 +8,5 @@ Run VM:
    
 Delete VM:
    sh remove.sh
+Reboot VM:
+   sh reboot.sh
