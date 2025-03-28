@@ -3,7 +3,7 @@
 Create VM:
    sh create_vm.sh
    
-If VM is stoped and you want to run VM:
+Run VM:
    sh run_vm.sh
    
 Delete VM:
