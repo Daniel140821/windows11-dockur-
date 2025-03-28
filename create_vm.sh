@@ -1,5 +1,5 @@
 sudo apt update
-sudo apt install cpu-checker
+sudo apt install cpu-checker -y
 sudo kvm ok
 sudo docker compose up -d
 echo "Winsows 11 VM runing"
